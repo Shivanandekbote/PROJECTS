@@ -1,0 +1,38 @@
+.form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form input {
+  flex: 1;
+  background-color: #1f2937;
+  color: #ffffff;
+  height: 40px;
+  border: 1px solid #c2b39a;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.add-button {
+  background-color: #4caf50;
+  color: #ffffff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+.add-button svg {
+  stroke: #ffffff;
+}

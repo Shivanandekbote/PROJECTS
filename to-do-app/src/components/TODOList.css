@@ -1,0 +1,95 @@
+/* Container for the task list */
+.todo_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between tasks */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%; /* Ensure the list takes full width of the container */
+}
+
+/* Styling for each task item */
+.todo_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px; /* Reduced padding for a smaller box */
+  border-radius: 5px; /* Slightly rounded corners */
+  border: 1px solid #ccc; /* Subtle border for better visibility */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for a clean look */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%; /* Ensure task items take full width */
+  box-sizing: border-box; /* Include padding and border in width/height calculations */
+}
+
+/* Hover effect for task items */
+.todo_item:hover {
+  transform: scale(1.02); /* Slightly enlarge the box on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styling for completed tasks */
+.todo_item.completed {
+  border-left: 5px solid #4caf50; /* Green border for completed tasks */
+}
+
+.todo_item.completed p {
+  text-decoration: line-through;
+  color: #888; /* Gray color for completed text */
+}
+
+/* Task text styling */
+.todo_item p {
+  flex: 1;
+  margin: 0;
+  font-size: 14px; /* Adjusted font size for better readability */
+  word-wrap: break-word; /* Ensure long text wraps properly */
+  overflow-wrap: break-word; /* Break long words */
+  line-height: 1.4; /* Improve readability */
+  white-space: normal; /* Allow text to wrap to the next line */
+}
+
+/* Left section of the task item */
+.todo_items_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1; /* Ensure the left section takes up available space */
+}
+
+/* Right section of the task item (buttons) */
+.todo_items_right {
+  display: flex;
+  gap: 5px; /* Reduced gap between buttons */
+  align-items: center;
+}
+
+/* Buttons in the right section */
+.todo_items_right button {
+  background-color: transparent;
+  border: none;
+  color: #007bff; /* Blue color for button text */
+  cursor: pointer;
+  font-size: 14px; /* Adjusted font size for better alignment */
+  text-decoration: underline; /* Underline for better visibility */
+  transition: color 0.2s ease;
+}
+
+.todo_items_right button:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .todo_item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .todo_items_right {
+    align-self: flex-end;
+  }
+}
